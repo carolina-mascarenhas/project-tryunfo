@@ -1,5 +1,4 @@
 import React from 'react';
-import './component.css';
 import PropTypes from 'prop-types';
 
 class Form extends React.Component {
@@ -15,13 +14,14 @@ class Form extends React.Component {
       // hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,
-      onSaveButtonClick } = this.props;
+      onSaveButtonClick,
+    } = this.props;
 
     return (
-      <>
+      <div className="container">
         <h1>Adicionar nova carta</h1>
-        <form>
-          <label htmlFor="card-name" className="titulo2">
+        <form className="form">
+          <label htmlFor="card-name" className="label">
             Nome
             <input
               type="text"
@@ -31,7 +31,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="card-description" className="titulo2">
+          <label htmlFor="card-description" className="label">
             Descrição
             <textarea
               data-testid="description-input"
@@ -40,7 +40,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="first-att" className="titulo2">
+          <label htmlFor="first-att" className="label">
             Attr01
             <input
               type="number"
@@ -50,7 +50,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="second-att" className="titulo2">
+          <label htmlFor="second-att" className="label">
             Attr02
             <input
               type="number"
@@ -60,7 +60,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="third-att" className="titulo2">
+          <label htmlFor="third-att" className="label">
             Attr03
             <input
               type="number"
@@ -70,7 +70,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="url-image" className="titulo2">
+          <label htmlFor="url-image" className="label">
             Imagem
             <input
               type="text"
@@ -80,7 +80,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="card-rare" className="titulo2">
+          <label htmlFor="card-rare" className="label">
             Raridade
             <select
               data-testid="rare-input"
@@ -93,7 +93,7 @@ class Form extends React.Component {
               <option>muito raro</option>
             </select>
           </label>
-          <label htmlFor="super-trunfo" className="titulo2">
+          <label htmlFor="super-trunfo" className="label">
             Super Trybe Trunfo
             <input
               type="checkbox"
@@ -112,7 +112,7 @@ class Form extends React.Component {
             Salvar
           </button>
         </form>
-      </>
+      </div>
     );
   }
 }
