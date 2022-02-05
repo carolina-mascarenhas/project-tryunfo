@@ -16,8 +16,10 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
+      cards: [],
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange({ target: { name, value, type, checked } }) {
@@ -29,6 +31,23 @@ class App extends React.Component {
     return this.setState(({
       [name]: value,
     }), this.checkValidation);
+  }
+
+  handleClick() {
+    const newCard = this.state;
+
+    this.setState((previousState) => ({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardImage: '',
+      cardRare: 'normal',
+      cardTrunfo: false,
+      isSaveButtonDisabled: true,
+      cards: [...previousState.cards, newCard],
+    }));
   }
 
   checkInputs() {
@@ -93,6 +112,7 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           onInputChange={ this.handleChange }
           isSaveButtonDisabled={ isSaveButtonDisabled }
+          onSaveButtonClick={ this.handleClick }
         />
         <Card
           cardName={ cardName }
