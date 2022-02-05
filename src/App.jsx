@@ -17,6 +17,7 @@ class App extends React.Component {
       cardTrunfo: false,
       isSaveButtonDisabled: true,
       cards: [],
+      hasTrunfo: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -34,7 +35,14 @@ class App extends React.Component {
   }
 
   handleClick() {
+    const { cardTrunfo } = this.state;
     const newCard = this.state;
+
+    if (cardTrunfo === true) {
+      this.setState({
+        hasTrunfo: true,
+      });
+    }
 
     this.setState((previousState) => ({
       cardName: '',
@@ -98,6 +106,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       isSaveButtonDisabled,
+      hasTrunfo,
     } = this.state;
     return (
       <div className="components">
@@ -113,6 +122,7 @@ class App extends React.Component {
           onInputChange={ this.handleChange }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onSaveButtonClick={ this.handleClick }
+          hasTrunfo={ hasTrunfo }
         />
         <Card
           cardName={ cardName }
