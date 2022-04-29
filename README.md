@@ -19,7 +19,7 @@ Neste projeto, desenvolvi habilidades como:
 # Rodar a aplicação
 
 1. Clone o repositório
-  * `git clone git@github.com:carolina-mascarenhas/project-tryunfo/git`.
+  * `git clone git@github.com:carolina-mascarenhas/project-tryunfo.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd project-tryunfo`
 
