@@ -26,7 +26,7 @@ class Form extends React.Component {
             title="Nome"
             type="text"
             dataTestId="name-input"
-            id="card-name"
+            id="cardName"
             cardName={ cardName }
             inputChange={ onInputChange }
           />
@@ -46,7 +46,7 @@ class Form extends React.Component {
             title="Attr01"
             type="number"
             dataTestId="attr1-input"
-            id="first-att"
+            id="cardAttr1"
             cardName={ cardAttr1 }
             inputChange={ onInputChange }
           />
@@ -55,7 +55,7 @@ class Form extends React.Component {
             title="Attr02"
             type="number"
             dataTestId="attr2-input"
-            id="second-att"
+            id="cardAttr2"
             cardName={ cardAttr2 }
             inputChange={ onInputChange }
           />
@@ -64,7 +64,7 @@ class Form extends React.Component {
             title="Attr03"
             type="number"
             dataTestId="attr3-input"
-            id="third-att"
+            id="cardAttr3"
             cardName={ cardAttr3 }
             inputChange={ onInputChange }
           />
@@ -73,7 +73,7 @@ class Form extends React.Component {
             title="Imagem"
             type="text"
             dataTestId="image-input"
-            id="url-image"
+            id="cardImage"
             cardName={ cardImage }
             inputChange={ onInputChange }
           />
@@ -98,7 +98,7 @@ class Form extends React.Component {
               title="Super Trybe Trunfo"
               type="checkbox"
               dataTestId="trunfo-input"
-              id="super-trunfo"
+              id="cardTrunfo"
               cardName={ cardTrunfo }
               inputChange={ onInputChange }
             />
